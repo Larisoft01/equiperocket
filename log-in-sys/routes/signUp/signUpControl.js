@@ -1,15 +1,15 @@
-
-const users = {
+const fs = require('fs');
+/*const users = {
     "1": { 
         email: "email", 
         password: "password"
     }
 
-};
-
+};*/
+const users = JSON.parse(fs.readFileSync("users.json"));
 function signUp(email, password) {   
     console.log("signUp", email, password);
-    const filteredUser = getUserByEmail(email);
+    const filteredUser = getUserByEmail(email); 
     if(!filteredUser || filteredUser.email !== email) {
         const newUser = {
             email: email,
@@ -18,6 +18,7 @@ function signUp(email, password) {
         const newUserList = {...users};
         const newUserId = Object.keys(users).length + 1;
         newUserList[newUserId.toString()] = newUser;
+        fs.writeFileSync("users.json", JSON.stringify(newUserList));
         console.log(newUserList);
         return true;
     }else{
@@ -26,6 +27,7 @@ function signUp(email, password) {
 }
 
 function getUserByEmail(email) {
+    
     const userArray = Object.values(users);
     const filteredUser = userArray.find(user => user.email === email);
     return filteredUser;

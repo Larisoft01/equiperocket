@@ -5,8 +5,8 @@ const{signUp} = require("./signUpControl");
 
 function postUser(req, res){
     try {
-        const email = req.body.email;;;
-        const password = req.body.password
+        const email = req.body.email;
+        const password = req.body.password;
         const status = signUp(email, password);
         if (status === true){
             res.status(201);
