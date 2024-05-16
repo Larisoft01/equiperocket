@@ -1,11 +1,5 @@
 const fs = require('fs');
-/*const users = {
-    "1": { 
-        email: "email", 
-        password: "password"
-    }
 
-};*/
 const users = JSON.parse(fs.readFileSync("users.json"));
 function signUp(email, password) {   
     console.log("signUp", email, password);

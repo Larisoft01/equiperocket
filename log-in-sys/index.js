@@ -1,6 +1,7 @@
 const express = require("express");
 
 const signUpRoute = require("./routes/signUp/signUpView");
+const signInRoute = require("./routes/signIn/signInView");
 
 const cors = require("cors");
 
@@ -9,6 +10,7 @@ app.use(express.json());
 app.use(cors({origin: "*"}));
 
 app.use("/sign-up", signUpRoute);
+app.use("/sign-in", signInRoute);
 
 const port = 8000; 
 

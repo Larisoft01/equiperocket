@@ -1,6 +1,4 @@
-const{signUp} = require("./signUpControl");
-
-
+const{signUp} = require("./signUpController");
 
 
 function postUser(req, res){
