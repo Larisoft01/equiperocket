@@ -9,7 +9,7 @@ router.use(bodyParser.json());
 
 router.get("/sign-in", authUser);
 router.post("/sign-up", postUser);
-router.get("/profile",authMiddlewere,getUser);
+router.get("/profile", authMiddlewere , getUser);
 
 
 module.exports = router;

@@ -1,18 +1,7 @@
 {
   "1": {
-    "email": "email",
-    "password": "password"
-  },
-  "2": {
-    "email": "teste",
-    "password": "teste"
-  },
-  "3": {
-    "email": "brunofodasp@gmail.com",
-    "password": "bruninho123"
-  },
-  "4": {
-    "email": "tes1",
-    "password": "bruninho123"
+    "email": "email@email.com",
+    "password": "senha",
+    "name": "Zé Niguem"
   }
 }

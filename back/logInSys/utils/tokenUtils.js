@@ -1,21 +1,21 @@
 const jwt = require('jsonwebtoken');
-const User = require( '../entities/user');
 
-const {... user} = User; 
-
-
-function generateToken(User) {
-    let token = jwt.sign({...user}, process.env.JWT_SECRET, {
-        expiresIn: 86400    
+function generateToken(user) {
+    const payload = {...user}; 
+    console.log(payload);
+    let token = jwt.sign(payload, process.env.JWT_SECRET, {
+        expiresIn: "1h"
     });
+   
     return token;
 };
 
 function verifyToken(token) {
    try{ 
-    return jwt.verify(token, process.env.SECRETs);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    return decoded;
     }catch(err){
-        return null
+        return;
     } 
 }
 
