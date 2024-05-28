@@ -1,6 +1,6 @@
 //Pegar as entidadese e os usecases para req e res e passar para as rotas
 
-import  getCatergory  from '../usecases/getCatergory.js';
+import  getCategory  from '../usecases/getCategory.js';
 import  getName  from '../usecases/getName.js';
 
 
@@ -12,7 +12,7 @@ function getEatery(req, res){
         if(eatery.name){
              filteredEatery = getName(eatery.name);
         }else if(eatery.category){
-             filteredEatery = getCatergory(eatery.category);
+             filteredEatery = getCategory(eatery.category);
         }
         
         return res.status(200).json(filteredEatery);
