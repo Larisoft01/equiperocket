@@ -1,12 +1,12 @@
 import Router from "express";
-import { getEatariesByCategory } from "../controllers/eateryController.js";
+import getEatery  from "../controllers/eateryController.js";
 
 
 const router = Router();
 
 // router.use(json());
 
-router.get("/",getEatariesByCategory );
+router.get("/",getEatery );
 
 
 export default router;
