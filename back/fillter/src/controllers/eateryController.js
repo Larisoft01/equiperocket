@@ -19,7 +19,7 @@ function getEatariesByCategory(req, res){
     try {
         const category = req.body;
         const filteredEatery = getCatergory(category);
-        return res.status(201).json(filteredEatery);
+        return res.status(200).json(filteredEatery);
     } catch (error) {
         res.status(500);
         return res.send(error.message);

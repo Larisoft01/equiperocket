@@ -12,11 +12,11 @@
     "3":{
         "name":"Estrela ", 
         "address":"Rua João Ramalho, 123", 
-        "category":" Churrascaria "
+        "category":"Churrascaria "
     }, 
     "4":{
         "name":"Bar do Zé ", 
         "address":"Rua 10, 54 ", 
-        "category":" Churrascaria"
+        "category":"Churrascaria"
     }
 }
